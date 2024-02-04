@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Widget.DeviceDefault.Light.Button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/drop76svgrepocom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/humidValues"
+        app:layout_constraintTop_toBottomOf="@+id/celciusView"
+        tools:src="@drawable/drop76svgrepocom" />
+
+    <ImageView
+        android:id="@+id/fahrenheitView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/thermometer_f_744_svgrepo_com"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tempValuesF"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/thermometer_f_744_svgrepo_com" />
+
+    <ImageView
+        android:id="@+id/celciusView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/thermometer_c_743_svgrepo_com"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tempValuesC"
+        app:layout_constraintTop_toBottomOf="@+id/fahrenheitView"
+        tools:src="@drawable/thermometer_c_743_svgrepo_com" />
+
+    <TextView
+        android:id="@+id/tempValuesC"
+        android:layout_width="185dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/shortxurkitregular"
+        android:gravity="center"
+        android:text="0.0"
+        android:textColor="#000000"
+        android:textSize="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/celciusView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempValuesF" />
+
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.DeviceDefault.Light.Button"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:text="ВКЛ BLE"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/cornerita"
+        android:text="список найденных BLE устройств"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disconnect" />
+
+    <Button
+        android:id="@+id/connect"
+        style="@android:style/Widget.DeviceDefault.Light.Button"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/cornerita"
+        android:text="поиск и ПОДКЛЮЧЕНИЕ"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidValues" />
+
+    <Button
+        android:id="@+id/disconnect"
+        style="@android:style/Widget.DeviceDefault.Light.Button"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/cornerita"
+        android:text="ОТКЛЮЧЕНИЕ"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connect" />
+
+    <TextView
+        android:id="@+id/tempValuesF"
+        android:layout_width="185dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/shortxurkitregular"
+        android:gravity="center"
+        android:text="0.0"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="70dp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toStartOf="@+id/fahrenheitView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/humidValues"
+        android:layout_width="185dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/shortxurkitregular"
+        android:gravity="center"
+        android:text="0.0"
+        android:textColor="#000000"
+        android:textSize="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempValuesC" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@android:style/Widget.DeviceDefault.Light.Button"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/cornerita"
+        android:text="база данных"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
